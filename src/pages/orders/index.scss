@@ -1,0 +1,128 @@
+
+.order-list-container {
+  width: 70%;
+  margin: 30px auto;
+  padding: 20px;
+  background: linear-gradient(145deg, #ffffff, #e6e6e6);
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+
+  .lazy-image-container {
+    width: auto;
+  }
+}
+
+.order-accordion {
+  margin-bottom: 15px;
+  border: 1px solid #d0d0d0;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.order-accordion:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.order-summary {
+  background-color: #fafafa;
+  padding: 10px;
+}
+
+.order-summary-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.order-date,
+.order-status,
+.order-total {
+  font-size: 16px;
+  font-weight: 500;
+  color: #555;
+}
+
+.order-details {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  background-color: #fff;
+}
+
+.order-items {
+  width: 100%;
+}
+
+.order-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #d0d0d0;
+  transition: background-color 0.3s ease;
+}
+
+.order-item:last-child {
+  border-bottom: none;
+}
+
+.order-item:hover {
+  background-color: #f9f9f9;
+}
+
+.order-item-details {
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.order-item img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.order-item img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.order-item-details h6 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.order-item-details p {
+  font-size: 14px;
+  color: #777;
+}
+
+@media (max-width: 768px) {
+  .order-list-container {
+    width: 90%;
+  }
+
+  .order-summary-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .order-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .order-item-details {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  .order-item img {
+    margin-bottom: 10px;
+  }
+}

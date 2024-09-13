@@ -1,0 +1,43 @@
+.fixed-filter-panel {
+    position: fixed;
+    left: 0;
+    top: 92px;
+    height: 48px;
+    width: 100%;
+    background-color: #fff;
+    z-index: 10;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .filter-panel {
+    margin-bottom: 20px;
+    border-radius: 10px;
+  }
+  
+  .filter-details {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .filter-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .filter-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  
+  .filter-panel .MuiAccordionSummary-root {
+    background-color: #fafafa;
+  }
+  
+  .filter-panel .MuiAccordionDetails-root {
+    background-color: #fff;
+  }
+  
+  

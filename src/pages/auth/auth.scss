@@ -1,0 +1,46 @@
+.auth {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  min-height: 300px;
+  margin: 0 auto;
+  margin-top: 100px;
+
+
+  .switch {
+    margin-top: 20px;
+
+    &:hover {
+      opacity: 0.5;
+      cursor: pointer;
+      color: rgba(167, 58, 253, 0.9);
+    }
+  }
+
+  .container {
+    padding: 20px;
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0,0,0,.1);
+
+    .container-inputs {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .btn {
+      width: 100%;
+      margin-top: 20px;
+    }
+    
+    .block-agreement {
+      margin-top: 40px;
+    }
+  }
+
+  @media (max-width: 768px) {
+      width: 90%;
+  }
+}
+

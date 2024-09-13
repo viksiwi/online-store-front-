@@ -1,0 +1,117 @@
+@import '../../variables';
+
+.sidebar {
+  position: fixed;
+  top: 91.2px;
+  bottom: 0;
+  background-color: white;
+  z-index: 100;
+
+  &__container {
+   position: relative;
+   display: flex;
+   height: 100%;
+   padding-right: 10px;
+
+    .categories__container {
+      display: flex;
+      min-width: 240px;
+      flex-direction: column;
+      padding-top: 30px;
+      height: 100%;
+      gap: 7px;
+    }
+
+    .category-block {
+      width: 220px;
+      margin: 0 auto;
+
+      .category-content {
+        justify-content: space-between;
+        padding: 4px 10px;
+        min-height: 25px;
+        display: flex;
+
+        &.active {
+          border-radius: 10px;
+          background-color: rgb(249, 244, 244);
+          cursor: pointer;
+        }
+
+        .title span {
+          font-size: 17px;
+        }
+
+        a {
+          font-family: Ubuntu;
+          cursor: pointer;
+          color: black;
+          text-decoration: none;  // Убираем подчеркивание по умолчанию
+  
+          &:hover {
+            color: $second-primary-color;  // Цвет ссылки при наведении
+            text-decoration: underline;  // Добавляем подчеркивание при наведении
+          }
+        }
+  
+        &:hover .subtitles__container {
+          display: block;
+        }
+      }
+    }
+
+    .subtitles__container {
+      padding-top: 30px;
+      width: 280px;
+      display: flex;
+      flex-direction: column;
+      margin-top: 10px;
+      height: 100%;
+
+      .icon-close {
+        font-size: 25px;
+        display: none;
+      }
+
+      .subtitles__content {
+        margin-left: 10px;
+        display: flex;
+        justify-content: space-between;
+        max-width: 90%;
+        min-height: 25px;
+        padding: 4px 10px;
+
+        .icon-arrow {
+          display: none;
+        }
+
+        &:hover {
+          background-color: rgb(249, 244, 244);
+          cursor: pointer;
+        }
+
+        &:hover .icon-arrow {
+          display: inline;
+        }
+      }
+
+      & span {
+        cursor: pointer;
+      }
+
+      @media (max-width: '768px') {
+        position: absolute;
+        background: white;
+        width: 240px;
+
+        .icon-close {
+          position: absolute;
+          display: block;
+          top: 0;
+          right: 10px;
+        }
+      }
+    }
+  }
+}
+

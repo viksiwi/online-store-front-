@@ -1,0 +1,46 @@
+.main {
+    background-color: rgb(252, 244, 244);
+    padding-bottom: 50px;
+    padding-top: 60px;
+    height: 100%;
+
+    .main-header {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 20px;
+
+        .filters-container {
+            flex: 1;
+            text-align: center;
+        }
+
+        .reset-filters {
+            margin-top: 20px;
+            flex: 0.5;
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    width: 90%;
+    margin: 0 auto;
+    justify-content: center;
+    }
+
+    @media (max-width: 768px) {
+        padding-top: 60px;
+        
+        .container {
+            gap: 50px !important;
+            }
+
+        .main-header {
+            flex-wrap: wrap;
+            text-align: center;
+        }
+    }
+}

@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.epmty-cart {
+  color: white;
+}
+
+.cart {
+  padding: 20px;
+  background: linear-gradient(0deg, rgba(36, 36, 36, .05) 0, rgba(36, 36, 36, .05) 100%), linear-gradient(97deg, #ed3cca .49%, #df34d2 14.88%, #d02bd9 29.27%, #bf22e1 43.14%, #ae1ae8 57.02%, #9a10f0 70.89%, #8306f7 84.76%, #7c1af8 99.15%);
+  border-radius: 12px;
+  max-width: 900px;
+  margin: 40px auto;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  min-height: 300px;
+  position: relative;
+  overflow: hidden;
+}
+
+.cart:before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 60%);
+  animation: rotateBackground 20s linear infinite;
+}
+
+@keyframes rotateBackground {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.cart h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.cart-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  border-radius: 8px;
+  position: relative;
+  z-index: 1;
+}
+
+.select-all-checkbox {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.cart-items {
+  list-style-type: none;
+  padding: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cart-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.cart-item-checkbox {
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.cart-item-image {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-right: 20px;
+  transition: transform 0.3s ease;
+}
+
+.cart-item-image:hover {
+  transform: scale(1.1);
+}
+
+.cart-item-details {
+  flex-grow: 1;
+}
+
+.cart-item-name {
+  font-size: 20px;
+  font-weight: 500;
+  color: #333;
+  display: block;
+}
+
+.cart-item-price {
+  font-size: 18px;
+  color: #666;
+  margin-top: 5px;
+}
+
+.cart-item-quantity {
+  width: 60px;
+  padding: 5px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  margin-right: 20px;
+  text-align: center;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.cart-item-quantity:focus {
+  border-color: #ff9a9e;
+  outline: none;
+}
+
+.cart-item-remove {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cart-item-remove:hover {
+  background-color: #ff1f1f;
+  transform: scale(1.1);
+}
+
+.cart-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.empty-cart {
+    color: white;
+}
+
+.cart-total {
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+
+  color: #fff;
+}
+
+.remove-selected-button,
+.order-button {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.remove-selected-button:hover,
+.order-button:hover {
+  background-color: #ff1f1f;
+  transform: scale(1.1);
+}
+
+.order-success {
+  text-align: center;
+  margin: 50px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+}
+
+.order-success h2 {
+  font-size: 28px;
+  color: #333;
+}
+
+.order-success p {
+  font-size: 18px;
+  color: #666;
+}
+
+.order-success img {
+  margin-top: 20px;
+  width: 50%;
+  height: auto;
+  border-radius: 12px;
+}
