@@ -1,5 +1,5 @@
 import { NavigateFunction } from 'react-router-dom';
-import axiosInstance from '../axios.config';
+import axiosInstance from '../axios.config'
 
 export const AuthService = {
   login: async (username: string, password: string, navigate: NavigateFunction) => {
